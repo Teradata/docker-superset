@@ -8,7 +8,7 @@ on:
 
 env:
   SUPERSET_VERSION: latest
-  TERADATASQL_VERSION: 17.10.0.9
+  TERADATASQLALCHEMY_VERSION: 17.10.0.2
 
 jobs:
   docker:
@@ -32,5 +32,5 @@ jobs:
           push: true
           build-args: |
             SUPERSET_VERSION=${{ env.SUPERSET_VERSION }}
-            TERADATASQL_VERSION=${{ env.TERADATASQL_VERSION }}
-          tags: teradata/superset:latest, teradata/superset:${{ env.SUPERSET_VERSION }}-${{ env.TERADATASQL_VERSION }}
+            TERADATASQLALCHEMY_VERSION=${{ env.TERADATASQLALCHEMY_VERSION }}
+          tags: teradata/superset:latest, teradata/superset:${{ env.SUPERSET_VERSION }}-${{ env.TERADATASQLALCHEMY_VERSION }}
