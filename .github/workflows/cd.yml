@@ -33,4 +33,4 @@ jobs:
           build-args: |
             SUPERSET_VERSION=${{ env.SUPERSET_VERSION }}
             TERADATASQL_VERSION=${{ env.TERADATASQL_VERSION }}
-          tags: teradata/superset:latest, teradata/superset-teradatasql:${{ env.PYTHON_VERSION }}-${{ env.TERADATASQL_VERSION }}
+          tags: teradata/superset:latest, teradata/superset-teradatasql:${{ env.SUPERSET_VERSION }}-${{ env.TERADATASQL_VERSION }}
