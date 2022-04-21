@@ -5,4 +5,6 @@ RUN python3 -m pip install teradatasqlalchemy==$TERADATASQLALCHEMY_VERSION
 USER root
 RUN groupmod -g 2000 superset
 RUN usermod -u 2000 superset
+RUN chown -R superset:superset /app/superset/
+RUN chown -R superset:superset /app/superset_home/
 USER superset
